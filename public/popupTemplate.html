@@ -1,0 +1,46 @@
+<div class="col-md-2 day"> 
+    <div class="tile" data-date="{{date}}">
+        {{#unlocked}}
+            <div class="tileBack">
+                <div class="factBehindDoor">
+                    {{title}}
+                    {{fact}}
+                </div>
+            </div>
+            <!-- insert some mustache to display div only when chocolate has not been eaten -->
+            {{^eatenChoc}}
+                <div class="chocolate" onclick="eatChocolate(this)">
+                    <img 
+                        class="chocolateImg"
+                        src={{chocolate}}
+                        name="chocolateImgName"
+                        alt="Chocolate"/>
+                </div>
+            {{/eatenChoc}}
+            <div class="doorStart tileTop" onclick="openDoor(this)"> 
+                <!-- <div class="tileTopImage">
+                    <img
+                        class="tileBackground"
+                        src="present_background.png"
+                        name="present_back"
+                        alt="Present Back" /> 
+                        displayChocolate(this)
+                </div> -->
+                <div class="dayContent"> 
+                    <span>  
+                        {{date}}
+                    </span>
+                </div>
+            </div>
+        {{/unlocked}}
+        {{^unlocked}}            
+            <div class="doorStart tileTop"> 
+                <div class="dayContent"> 
+                    <span>    
+                        {{date}}
+                    </span>
+                </div>
+            </div>    
+        {{/unlocked}}
+    </div>
+</div>
