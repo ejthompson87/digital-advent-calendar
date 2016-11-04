@@ -1,4 +1,4 @@
-<div class="col-md-2 day"> 
+<div class="day"> <!-- col-md-2 -->
     <div class="tile" data-date="{{date}}">
         {{#unlocked}}
             <div class="tileBack">
@@ -7,7 +7,6 @@
                     {{fact}}
                 </div>
             </div>
-            <!-- insert some mustache to display div only when chocolate has not been eaten -->
             {{^eatenChoc}}
                 <div class="chocolate" onclick="eatChocolate(this)">
                     <img 

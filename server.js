@@ -16,7 +16,7 @@ app.use(cookieParser());
 
 function dateNow() {
     // change back to 11 for December!
-    if (new Date().getMonth() === 9) {
+    if (new Date().getMonth() === 10) {
         return new Date().getDate();
     } else {
         return 0;

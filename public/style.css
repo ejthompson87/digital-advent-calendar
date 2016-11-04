@@ -1,42 +1,73 @@
+
 body {
-    background-image: url("present_background.png");
-    /* url("whistler_snow.jpg"); */
+    background-color: #D3D3D3;
+    /* url("whistler_snow.jpg"); 
     background-size: 1400px 800px; */
+    text-align: center;
+    padding-top: 40px;
+}
+
+.adventCalendar {
+    background-image: url("present_background.png");
+    background-size: 100% 100%;
+    width: 960px;
+    height: 600px;
+    display: inline-block;
+    /* background-size: 1050px 650px; */
 }
 
 .row {
-    height: 25%;
+    /* height is exactly 1 / 4 of the advent calendar height */
+    height: 150px;
+    padding-left: 22px;
+    padding-top: 10px;
+    /* padding-top: 5px;
+    padding-right: 5px; */
 }
 
 .day {
-    height: 100%;
+    height: 150px;
+    float: left;
+    /* width is exactly 1 / 6 of the advent calendar width */ 
+    width: 160px;
 }
 
-.row {
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.tile div {
-    width:90%;
-    height:90%;
-    padding-left: 10px;
+/*.tile div */
+.tile {
+    /* exactly 90% of the width of day and height of row */
+    width: 144px;
+    height: 135px;
+    /* padding-left: 10px; */
 }
 
 .tileBack {
     background: #74D680;
+    width: 144px;
+    height: 135px;    
     position: absolute;
 }
 
 .tileTop {
+    background-image: url("present_background.png");
+ /*    background-size: 1000px 700px; */
+    background-attachment: fixed;  
+    background-size: 100% 100%;
+    width: 144px;
+    height: 135px;
     border: 2px dotted white;
     border-left: none;
-    background: red; 
+ /*   background: red; */
+    cursor: pointer;
     display: block;
     position: absolute;
 }
 
+.chocolate {
+    width: 144px;
+    height: 135px;
+    position: absolute;
+    background: #74D680;
+}
 /*
 .tileTopImage {
     position: absolute; 
@@ -49,7 +80,10 @@ body {
 
 .dayContent {
     padding-top: 25px;
-    text-align: center;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     font-style: Glegoo;
     font-size: 48px;
     text-shadow: 1px 1px white;
@@ -66,15 +100,10 @@ body {
     color: black;
 }
 
-.chocolate {
-    position: absolute;
-    background: #74D680;
-}
-
 .chocolateImg {
     /* used bevel -> difuse light feature for chocolate in inkscape */ 
-    width: 90%;
-    height: auto;
+    width: 130px;
+    height: 130px;
     vertical-align: middle;
 }
 
