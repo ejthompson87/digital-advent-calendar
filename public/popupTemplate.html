@@ -8,6 +8,14 @@
                 </div>
             </div>
             {{^eatenChoc}}
+                <div class="chocolateBite" onclick="biteChoc(this)">
+                    <img 
+                        class="chocolateImg"
+                        src="chocolateStar_bite1.png"
+                        name="chocolateBiteName"
+                        alt="Bitten Chocolate"/>
+                </div>
+
                 <div class="chocolate" onclick="eatChocolate(this)">
                     <img 
                         class="chocolateImg"
@@ -17,14 +25,6 @@
                 </div>
             {{/eatenChoc}}
             <div class="doorStart tileTop" onclick="openDoor(this)"> 
-                <!-- <div class="tileTopImage">
-                    <img
-                        class="tileBackground"
-                        src="present_background.png"
-                        name="present_back"
-                        alt="Present Back" /> 
-                        displayChocolate(this)
-                </div> -->
                 <div class="dayContent"> 
                     <span>  
                         {{date}}

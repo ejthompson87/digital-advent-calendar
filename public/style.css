@@ -10,6 +10,8 @@ body {
 .adventCalendar {
     background-image: url("present_background.png");
     background-size: 100% 100%;
+    opacity: 1;
+    filter: alpha(opacity=100);
     width: 960px;
     height: 600px;
     display: inline-block;
@@ -68,15 +70,13 @@ body {
     position: absolute;
     background: #74D680;
 }
-/*
-.tileTopImage {
-    position: absolute; 
-}
 
-.tileBackground {
-    clip-path: inset(0, 150px, 200px, 0);
+.chocolateBite {
+    width: 144px;
+    height: 135px;
+    position: absolute;
+    background: #74D680;
 }
-*/
 
 .dayContent {
     padding-top: 25px;

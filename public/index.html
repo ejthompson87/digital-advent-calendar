@@ -60,7 +60,8 @@
     };
 
     function eatChocolate(target) {
-        $(target).toggleClass("hide");
+        $(target).fadeOut('slow');
+        // $(target).toggleClass("hide");
         var date = $(target).closest('.tile').data('date');
         console.log(date);
         var chocsEaten = Cookies.get('chocsEaten');
@@ -76,6 +77,11 @@
             }
         }
     }
+
+    function biteChoc(target) {
+        $(target).fadeOut('slow');
+    }
+
     </script>   
 
 </body>
