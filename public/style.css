@@ -1,21 +1,22 @@
 
 body {
     background-color: #D3D3D3;
-    /* url("whistler_snow.jpg"); 
-    background-size: 1400px 800px; */
     text-align: center;
     padding-top: 40px;
 }
 
 .adventCalendar {
-    background-image: url("present_background.png");
-    background-size: 100% 100%;
-    opacity: 1;
-    filter: alpha(opacity=100);
     width: 960px;
     height: 600px;
-    display: inline-block;
-    /* background-size: 1050px 650px; */
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-image: url("present_background_new.png");
+    background-position: right -189px bottom -106px;
+    background-size: 1050px 650px;
+    background-repeat: repeat repeat;
+    /* display: inline-block; */
 }
 
 .row {
@@ -23,8 +24,6 @@ body {
     height: 150px;
     padding-left: 22px;
     padding-top: 10px;
-    /* padding-top: 5px;
-    padding-right: 5px; */
 }
 
 .day {
@@ -39,7 +38,6 @@ body {
     /* exactly 90% of the width of day and height of row */
     width: 144px;
     height: 135px;
-    /* padding-left: 10px; */
 }
 
 .tileBack {
@@ -50,17 +48,17 @@ body {
 }
 
 .tileTop {
-    background-image: url("present_background.png");
- /*    background-size: 1000px 700px; */
-    background-attachment: fixed;  
-    background-size: 100% 100%;
     width: 144px;
     height: 135px;
     border: 2px dotted white;
     border-left: none;
- /*   background: red; */
+    background-color: #74D680;
+    background-image: url("present_background_new.png");
+    background-position: right 290px bottom 10px;
+    background-size: 1050px 650px; 
+    background-attachment: fixed;  
     cursor: pointer;
-    display: block;
+    /* display: block; */
     position: absolute;
 }
 
@@ -75,7 +73,7 @@ body {
     width: 144px;
     height: 135px;
     position: absolute;
-    background: #74D680;
+    background: #74D680;        
 }
 
 .dayContent {

@@ -59,7 +59,7 @@ module.exports = function calendarCalc(currentDate, chocCookieArray) {
         calendarDatesRow2 : [day11, day24, day8, day21, day1, day12],
     // for dates 16, 18, 3, 15, 23, 4 
         calendarDatesRow3 : [day16, day18, day3, day15, day23, day4],
-    // for dates 13, 19, 5, 22, 10
+    // for dates 13, 19, 5, 22, 10, 2
         calendarDatesRow4 : [day13, day19, day5, day22, day10, day2]
     }
 
