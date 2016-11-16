@@ -7,15 +7,16 @@
                     {{fact}}
                 </div>
             </div>
-            {{^eatenChoc}}
+            {{^bittenChoc}}
                 <div class="chocolateBite" onclick="biteChoc(this)">
                     <img 
                         class="chocolateImg"
-                        src="chocolateStar_bite1.png"
+                        src={{chocolateBite}}
                         name="chocolateBiteName"
                         alt="Bitten Chocolate"/>
                 </div>
-
+            {{/bittenChoc}}
+            {{^eatenChoc}}
                 <div class="chocolate" onclick="eatChocolate(this)">
                     <img 
                         class="chocolateImg"

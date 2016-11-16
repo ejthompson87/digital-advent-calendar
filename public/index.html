@@ -66,21 +66,41 @@
         console.log(date);
         var chocsEaten = Cookies.get('chocsEaten');
         // update chocStr when eat cookie - add the dateindex to the string chocEaten
-        if (chocsEaten == null) {
-            Cookies.set('chocsEaten', date.toString(), { expires : 30 });
-        } else {
-            if (chocsEaten === "") {
-                Cookies.set('chocsEaten', date.toString(), { expires : 30 });
-            } 
-            else {
-                Cookies.set('chocsEaten', chocsEaten + "," + date.toString(), { expires : 30 });
-            }
-        }
+        createChocCookieArray('chocsEaten', chocsEaten, date);
+
+        // if (chocsEaten == null) {
+        //     Cookies.set('chocsEaten', date.toString(), { expires : 30 });
+        // } else {
+        //     if (chocsEaten === "") {
+        //         Cookies.set('chocsEaten', date.toString(), { expires : 30 });
+        //     } 
+        //     else {
+        //         Cookies.set('chocsEaten', chocsEaten + "," + date.toString(), { expires : 30 });
+        //     }
+        // }
+
     }
 
     function biteChoc(target) {
         $(target).fadeOut('slow');
+        var date = $(target).closest('.tile').data('date');
+        var chocsBitten = Cookies.get('chocsBitten');
+        console.log(chocsBitten);
+        createChocCookieArray('chocsBitten', chocsBitten, date);
     }
+
+    function createChocCookieArray (cookieName, cookieValue, date) {
+        if (cookieValue == null) {
+            Cookies.set(cookieName, date.toString(), {expires : 30});
+        } else {
+            if (cookieValue === "") {
+                Cookies.set(cookieName, date.toString(), { expires : 30 });
+            }
+            else {
+                Cookies.set(cookieName, cookieValue + "," + date.toString(), { expires : 30 });
+            }
+        } 
+    } 
 
     </script>   
 

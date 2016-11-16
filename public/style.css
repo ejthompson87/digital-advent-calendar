@@ -1,6 +1,9 @@
 
 body {
     background-color: #D3D3D3;
+    background-image: url("background_trees.png");
+    background-size: 460px 500px;
+    background-repeat: repeat repeat;
     text-align: center;
     padding-top: 40px;
 }

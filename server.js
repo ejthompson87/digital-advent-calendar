@@ -30,13 +30,18 @@ app.get('/', function (req, res) {
     if (dates == null) {
         dates = [];
     }
+    var datesChocBitten = parseChocCookie(req.cookies.chocsBitten);
+    if (datesChocBitten == null) {
+        datesChocBitten = [];
+    }
     console.log(dates);
-    var calendarContent = funfactsCreate(dateNow(), dates);
+    var calendarContent = funfactsCreate(dateNow(), dates, datesChocBitten);
     res.render('index', calendarContent);
 });
 
 app.get('/clear', function(req, res) {
     res.clearCookie("chocsEaten");
+    res.clearCookie("chocsBitten");
     res.redirect("/");
 })
 // Input: the contents of the cookie (which may be undefined)
