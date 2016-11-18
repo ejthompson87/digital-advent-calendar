@@ -15,8 +15,13 @@ body {
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    background-image: url("present_background_new.png");
-    background-position: right -189px bottom -106px;
+    background-image: url("present_background_doors.png");
+
+    /* correct position to match doors:; 
+    background-position: right -189px bottom -106px;  */ 
+    background-position: top center;
+    
+    background-attachment: fixed;
     background-size: 1050px 650px;
     background-repeat: repeat repeat;
     /* display: inline-block; */
@@ -56,10 +61,15 @@ body {
     border: 2px dotted white;
     border-left: none;
     background-color: #74D680;
-    background-image: url("present_background_new.png");
-    background-position: right 290px bottom 10px;
+    background-image: url("present_background_doors.png");
+
+    /* correct position to match background: ;
+    background-position: right 290px bottom 10px;  */  
+    
+    background-position: top center;
+
     background-size: 1050px 650px; 
-    background-attachment: fixed;  
+    background-attachment: fixed; 
     cursor: pointer;
     /* display: block; */
     position: absolute;

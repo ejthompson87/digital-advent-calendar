@@ -67,18 +67,6 @@
         var chocsEaten = Cookies.get('chocsEaten');
         // update chocStr when eat cookie - add the dateindex to the string chocEaten
         createChocCookieArray('chocsEaten', chocsEaten, date);
-
-        // if (chocsEaten == null) {
-        //     Cookies.set('chocsEaten', date.toString(), { expires : 30 });
-        // } else {
-        //     if (chocsEaten === "") {
-        //         Cookies.set('chocsEaten', date.toString(), { expires : 30 });
-        //     } 
-        //     else {
-        //         Cookies.set('chocsEaten', chocsEaten + "," + date.toString(), { expires : 30 });
-        //     }
-        // }
-
     }
 
     function biteChoc(target) {
