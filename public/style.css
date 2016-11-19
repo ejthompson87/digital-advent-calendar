@@ -106,6 +106,12 @@ body {
     vertical-align: middle;
 }
 
+.lockedPopup {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+} 
+
 .doorOpen {
     -webkit-animation: leftOpen 0.90s ease 0.40s;
     -webkit-animation-fill-mode: forwards; 
