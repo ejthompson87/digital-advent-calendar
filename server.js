@@ -1,10 +1,11 @@
+"use strict";
+
 var express = require('express');
 var fs = require('fs');
 var app = express();
 var mustacheExpress = require('mustache-express');
 var funfactsCreate = require('./funfacts.js');
 var cookieParser = require('cookie-parser');
-
 
 // render pages
 app.engine('html', mustacheExpress());   
