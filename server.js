@@ -23,6 +23,19 @@ function dateNow() {
     }
 }
 
+// function getDate(timestamp) {
+//     // Multiply by 1000 because JS works in milliseconds instead of the UNIX seconds
+//     var date = new Date(timestamp * 1000);
+//     var month = date.getUTCMonth() + 1; // getMonth() is zero-indexed, so we'll increment to get the correct month number
+//     var day = date.getUTCDate();
+
+//     month = (month < 10) ? '0' + month : month;
+//     day = (day < 10) ? '0' + day : day;
+//     localDate = [month, day];
+
+//     return localDate;
+// }
+
 // create list of fun facts - add different day fun fact for each day
 app.get('/', function (req, res) {
     // Get the cookie for this person's request

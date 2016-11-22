@@ -1,0 +1,23 @@
+{
+  "name": "advent_calendar",
+  "version": "1.0.0",
+  "description": "Digital Advent Calendar",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "cookie-parser": "^1.4.3",
+    "mustache-express": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Advent",
+    "Calendar",
+    "Christmas"
+  ],
+  "author": "Emma Thompson",
+  "license": "ISC"
+}
