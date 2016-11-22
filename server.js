@@ -88,6 +88,8 @@ function parseChocCookie(chocsStr) {
 // set static folder
 app.use(express.static(__dirname + '/public')); 
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+var portListen = process.env.PORT || 5000;
+
+app.listen(portListen, function () {
+    console.log('Example app listening on port ', (portListen));
 });
