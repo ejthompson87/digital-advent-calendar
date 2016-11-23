@@ -12,6 +12,7 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
 
     var createDate = function(dateindex, fact, chocolate, chocolateBite) {
         var eaten;
+        console.log(chocCookieArray);
         if (chocCookieArray.includes(dateindex)) {
             eaten = true;
         } else {
