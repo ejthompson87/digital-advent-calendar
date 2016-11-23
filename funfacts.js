@@ -12,17 +12,18 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
 
     var createDate = function(dateindex, fact, chocolate, chocolateBite) {
         var eaten;
-        console.log(chocCookieArray);
-        if (chocCookieArray.includes(dateindex)) {
-            eaten = true;
-        } else {
+        // if (chocCookieArray.includes(dateindex)) {
+        if (chocCookieArray.indexOf(dateindex) === -1) {
             eaten = false;
+        } else {
+            eaten = true;
         }
         var bitten;
-        if (chocCookieBittenArray.includes(dateindex)) {
-            bitten = true;
-        } else {
+        // if (chocCookieBittenArray.includes(dateindex)) {
+        if (chocCookieBittenArray.indexOf(dateindex) === -1) {
             bitten = false;
+        } else {
+            bitten = true;
         }
        // if (chocCookieArray contains dateindex then true else false)
         return new day(dateindex, "Fun Fact #" + dateindex + ": ", fact, chocolate, chocolateBite, currentDate >= dateindex, eaten, bitten);
