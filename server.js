@@ -7,6 +7,9 @@ var mustacheExpress = require('mustache-express');
 var funfactsCreate = require('./funfacts.js');
 var cookieParser = require('cookie-parser');
 
+// var moment = require('moment');
+// moment().format();
+
 // render pages
 app.engine('html', mustacheExpress());   
 
@@ -15,47 +18,90 @@ app.set('views', __dirname + '/public');
 
 app.use(cookieParser());
 
+// old dateNow function
+// adjust dateNow function for timezone offset
 function dateNow() {
     // change back to 11 for December!
-    if (new Date().getMonth() === 10) {
+    if (new Date().getMonth() === 11) {
         return new Date().getDate();
     } else {
         return 0;
     }
 }
 
-// function getDate(timestamp) {
-//     // Multiply by 1000 because JS works in milliseconds instead of the UNIX seconds
-//     var date = new Date(timestamp * 1000);
-//     var month = date.getUTCMonth() + 1; // getMonth() is zero-indexed, so we'll increment to get the correct month number
+
+// function dateNow(offset) {
+//     // parse in cookie for offset
+//     var date = new Date();
+//     var month = date.getUTCMonth();
 //     var day = date.getUTCDate();
+//     var hours = date.getUTCHours();
 
-//     month = (month < 10) ? '0' + month : month;
-//     day = (day < 10) ? '0' + day : day;
-//     localDate = [month, day];
+//     var offsetNum = parseInt(offset);
 
-//     return localDate;
+//     if (offsetNum === 0) {
+//         checkMonth(month, day);
+//     }
+
+//     var offsetHours = offsetNum / 60;
+
+//     // positive number is less than UTC
+//     if (offsetHours > 0) {
+//         var localHours = hours - offsetHours;
+//         console.log(localHours);
+//         if (localHours < 0) {
+//             checkMonth(month, day - 1);
+//         } 
+//     }
+
+//     if (offsetHours < 0) {
+//         // taking away a negative, will produce positive 
+//         var localHours = hours - offsetHours;
+//         console.log(localHours);
+//         if (localHours > 24) {
+//             checkMonth(month, day + 1);
+//         }
+//     }
+
+//     function checkMonth(month, day) {
+//         if (month === 10) {
+//             return day;
+//         } else {
+//             return 0;
+//         }
+//     }
 // }
+
+    // check the timezone offset 
+    // adjust 'date' to be in user's timezone
+    // return correct timezone day 
+
+
 
 // create list of fun facts - add different day fun fact for each day
 app.get('/', function (req, res) {
-    // Get the cookie for this person's request
-    var dates = parseChocCookie(req.cookies.chocsEaten);
-    if (dates == null) {
-        dates = [];
+    if (req.cookies.timezone == null) {
+        res.render('timezonePage');
+        return;
+    }
+    // Get the cookie for this peron's request
+    var datesChocEaten = parseChocCookie(req.cookies.chocsEaten);
+    if (datesChocEaten == null) {
+        datesChocEaten = [];
     }
     var datesChocBitten = parseChocCookie(req.cookies.chocsBitten);
     if (datesChocBitten == null) {
         datesChocBitten = [];
     }
-    console.log(dates);
-    var calendarContent = funfactsCreate(dateNow(), dates, datesChocBitten);
+    console.log(datesChocEaten);
+    var calendarContent = funfactsCreate(dateNow(req.cookies.timezone), datesChocEaten, datesChocBitten);
     res.render('index', calendarContent);
 });
 
 app.get('/clear', function(req, res) {
     res.clearCookie("chocsEaten");
     res.clearCookie("chocsBitten");
+    res.clearCookie("timezone");
     res.redirect("/");
 })
 // Input: the contents of the cookie (which may be undefined)

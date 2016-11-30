@@ -87,6 +87,8 @@ body {
     font-size: 48px;
     text-shadow: 1px 1px white;
     cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
     position: absolute; 
 }
 
@@ -111,6 +113,10 @@ body {
     font-size: 12px;
     text-align: center;
 } 
+
+.timezone {
+    font-size: 40px;
+}
 
 .doorOpen {
     -webkit-animation: leftOpen 0.90s ease 0.40s;

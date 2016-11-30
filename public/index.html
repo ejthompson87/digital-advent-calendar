@@ -97,14 +97,11 @@
     function lockedClick() {
         lockedClickCount++; 
         if (lockedClickCount > 3) {
-
             console.log("This is Locked!");
-
             $('.lockedPopup').show();
             setTimeout(function() {
                 $('.lockedPopup').hide();
             }, 5000);
-
             lockedClickCount = 0;
         }
     }

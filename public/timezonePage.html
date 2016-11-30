@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+    <title> </title>
+
+    <link   rel="stylesheet"
+            type="text/css"
+            href="bootstrap.css"
+    />
+
+    <link   rel="stylesheet"
+            type="text/css"
+            href="style.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"> </script>
+    <script src="/js.cookie.js"></script>
+
+</head>
+
+<body>
+
+<div class="timezone">
+    Merry Christmas!!
+</div>
+
+<script type="text/javascript">
+    
+    $(document).ready(function timezoneCookie() {
+        // different in minutes between UTC and local time
+        // offset is positive if the local timezone is behind UTC and negative if it is ahead
+        var offset = new Date().getTimezoneOffset();
+        console.log(offset);
+        Cookies.set("timezone", offset);
+        location.reload(true);
+    });
+
+</script>
+
+</body>
+</html>
