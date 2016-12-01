@@ -20,63 +20,61 @@ app.use(cookieParser());
 
 // old dateNow function
 // adjust dateNow function for timezone offset
-function dateNow() {
-    // change back to 11 for December!
-    if (new Date().getMonth() === 11) {
-        return new Date().getDate();
+// function dateNow() {
+//     // change back to 11 for December!
+//     if (new Date().getMonth() === 11) {
+//         return new Date().getDate();
+//     } else {
+//         return 0;
+//     }
+// }
+
+function checkMonth(month, day) {
+    if (month === 11) {
+        return day;
     } else {
         return 0;
     }
 }
 
+function dateNow(offset) {
+    // parse in cookie for offset
+    var date = new Date();
+    var month = date.getUTCMonth();
+    var day = date.getUTCDate();
+    var hours = date.getUTCHours();
 
-// function dateNow(offset) {
-//     // parse in cookie for offset
-//     var date = new Date();
-//     var month = date.getUTCMonth();
-//     var day = date.getUTCDate();
-//     var hours = date.getUTCHours();
+    var offsetNum = parseInt(offset);
 
-//     var offsetNum = parseInt(offset);
+    if (offsetNum === 0) {
+        return checkMonth(month, day);
+    }
 
-//     if (offsetNum === 0) {
-//         checkMonth(month, day);
-//     }
+    var offsetHours = offsetNum / 60;
 
-//     var offsetHours = offsetNum / 60;
+    // positive number is less than UTC
+    if (offsetHours > 0) {
+        var localHours = hours - offsetHours;
+        console.log(hours);
+        console.log(localHours);
+        if (localHours < 0) {
+            return checkMonth(month, day - 1);
+        } else {
+            return checkMonth(month, day);
+        }
+    }
 
-//     // positive number is less than UTC
-//     if (offsetHours > 0) {
-//         var localHours = hours - offsetHours;
-//         console.log(localHours);
-//         if (localHours < 0) {
-//             checkMonth(month, day - 1);
-//         } 
-//     }
-
-//     if (offsetHours < 0) {
-//         // taking away a negative, will produce positive 
-//         var localHours = hours - offsetHours;
-//         console.log(localHours);
-//         if (localHours > 24) {
-//             checkMonth(month, day + 1);
-//         }
-//     }
-
-//     function checkMonth(month, day) {
-//         if (month === 10) {
-//             return day;
-//         } else {
-//             return 0;
-//         }
-//     }
-// }
-
-    // check the timezone offset 
-    // adjust 'date' to be in user's timezone
-    // return correct timezone day 
-
-
+    if (offsetHours < 0) {
+        // taking away a negative, will produce positive 
+        var localHours = hours - offsetHours;
+        console.log(localHours);
+        if (localHours > 24) {
+            return checkMonth(month, day + 1);
+        } else {
+            return checkMonth(month, day);
+        }
+    }
+}
 
 // create list of fun facts - add different day fun fact for each day
 app.get('/', function (req, res) {
