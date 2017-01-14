@@ -68,13 +68,15 @@ body {
     height: 135px;
     position: absolute;
     background: #74D680;
+    cursor: pointer;
 }
 
 .chocolateBite {
     width: 144px;
     height: 135px;
     position: absolute;
-    background: #74D680;        
+    background: #74D680;
+    cursor: pointer;        
 }
 
 .dayContent {
@@ -114,9 +116,10 @@ body {
     text-align: center;
 } 
 
+/**
 .timezone {
     font-size: 40px;
-}
+} **/
 
 .doorOpen {
     -webkit-animation: leftOpen 0.90s ease 0.40s;

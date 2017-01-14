@@ -30,7 +30,8 @@ app.use(cookieParser());
 // }
 
 function checkMonth(month, day) {
-    if (month === 11) {
+    // changed to January 
+    if (month === 0) {
         return day;
     } else {
         return 0;
@@ -55,8 +56,6 @@ function dateNow(offset) {
     // positive number is less than UTC
     if (offsetHours > 0) {
         var localHours = hours - offsetHours;
-        console.log(hours);
-        console.log(localHours);
         if (localHours < 0) {
             return checkMonth(month, day - 1);
         } else {
@@ -67,7 +66,6 @@ function dateNow(offset) {
     if (offsetHours < 0) {
         // taking away a negative, will produce positive 
         var localHours = hours - offsetHours;
-        console.log(localHours);
         if (localHours > 24) {
             return checkMonth(month, day + 1);
         } else {
