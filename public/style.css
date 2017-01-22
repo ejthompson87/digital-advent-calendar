@@ -122,34 +122,95 @@ body {
 } **/
 
 .doorOpen {
-    -webkit-animation: leftOpen 0.90s ease 0.40s;
+    -webkit-animation: 0.90s ease 0.40s leftOpen;
+    /* -ms-animation: leftOpen 0.90s ease 0.40s; */
+    -o-animation: 0.90s ease 0.40s leftOpen;
+    animation: 0.90s ease 0.40s leftOpen;
     -webkit-animation-fill-mode: forwards; 
+    /* -ms-animation-fill-mode: forwards; */
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 .doorClose {
-    -webkit-animation: leftClose 0.90s ease 0s;
+    -webkit-animation: 0.90s ease 0s leftClose;
+    /* -ms-animation: leftClose 0.90s ease 0s; */
+    -o-animation: 0.90s ease 0s leftClose;
+    animation: 0.90s ease 0s leftClose;
     -webkit-animation-fill-mode: forwards;
+    /* -ms-animation-fill-mode: forwards; */ 
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
-
+ 
 @-webkit-keyframes leftOpen {
     from {
-       -webkit-transform: perspective(1000) rotateY(0deg);
+       -webkit-transform: perspective(1000px) rotateY(0deg);
        -webkit-transform-origin: 0% 0%;
     }
     to {
-       -webkit-transform: perspective(1000) rotateY(-100deg);
-        -webkit-transform-origin: 0% 50%;
+       -webkit-transform: perspective(1000px) rotateY(-100deg);
+       -webkit-transform-origin: 0% 50%;
     }
 }
 
-@-webkit-keyframes leftClose {
+@-o-keyframes leftOpen {
     from {
-       -webkit-transform: perspective(1000) rotateY(-100deg);
+       -o-transform: perspective(1000px) rotateY(0deg);
+       -o-transform-origin: 0% 0%;
+    }
+    to {
+       -o-transform: perspective(1000px) rotateY(-100deg);
+       -o-transform-origin: 0% 50%;
+    }
+}
+
+/* animation works for firefox -moz- */
+@keyframes leftOpen {
+    from {
+       transform: perspective(1000px) rotateY(0deg);
+       transform-origin: 0% 0%;
+    }
+    to {
+       transform: perspective(1000px) rotateY(-100deg);
+       transform-origin: 0% 50%;
+    } 
+}
+
+@-webkit-keyframes leftClose {
+    /* 0% is equivalent to from; the starting point of the animation */
+    from {
+       -webkit-transform: perspective(1000px) rotateY(-100deg);
        -webkit-transform-origin: 0% 50%;
     } 
+    /* 100% is equivalent to 'to'; the ending point of the animation */
     to {
-       -webkit-transform: perspective(1000) rotateY(0deg);
-        -webkit-transform-origin: 0% 0%;
+       -webkit-transform: perspective(1000px) rotateY(0deg);
+       -webkit-transform-origin: 0% 0%;
+    }
+}
+
+@-o-keyframes leftClose {
+    from {
+       -o-transform: perspective(1000px) rotateY(-100deg);
+       -o-transform-origin: 0% 50%;
+    } 
+    to {
+       -o-transform: perspective(1000px) rotateY(0deg);
+       -o-transform-origin: 0% 0%;
+    }
+}
+
+/* animation works for firefox -moz- */
+@keyframes leftClose {
+    from {
+       transform: perspective(1000px) rotateY(-100deg);
+       transform-origin: 0% 50%;
+
+    } 
+    to {
+       transform: perspective(1000px) rotateY(0deg);
+       transform-origin: 0% 0%;
     }
 }
 
