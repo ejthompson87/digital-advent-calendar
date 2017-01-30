@@ -15,10 +15,7 @@ body {
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    background-image: url("present_background_doors.png");
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: 1050px 650px;
+    background-color: #CD0000; 
 }
 
 .row {
@@ -43,7 +40,7 @@ body {
 }
 
 .tileBack {
-    background: #74D680;
+    background: #74D680; 
     width: 144px;
     height: 135px;    
     position: absolute;
@@ -54,13 +51,26 @@ body {
     height: 135px;
     border: 2px dotted white;
     border-left: none;
-    background-color: #74D680;
+    /* background color for not chrome */
+    background-color: #659D32; 
+    cursor: pointer;
+    position: absolute;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .adventCalendar {
+    background-image: url("present_background_doors.png");
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: 1050px 650px;
+    }
+    .tileTop {
+    background-color: #74D680; 
     background-image: url("present_background_doors.png");
     background-position: top center;
     background-size: 1050px 650px; 
     background-attachment: fixed; 
-    cursor: pointer;
-    position: absolute;
+    } 
 }
 
 .chocolate {
@@ -116,31 +126,24 @@ body {
     text-align: center;
 } 
 
-/**
-.timezone {
-    font-size: 40px;
-} **/
-
 .doorOpen {
     -webkit-animation: 0.90s ease 0.40s leftOpen;
-    /* -ms-animation: leftOpen 0.90s ease 0.40s; */
     -o-animation: 0.90s ease 0.40s leftOpen;
     animation: 0.90s ease 0.40s leftOpen;
-    -webkit-animation-fill-mode: forwards; 
-    /* -ms-animation-fill-mode: forwards; */
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards, none;
+    -o-animation-fill-mode: forwards, none;
+    animation-fill-mode: forwards, none;
 }
 
 .doorClose {
     -webkit-animation: 0.90s ease 0s leftClose;
-    /* -ms-animation: leftClose 0.90s ease 0s; */
     -o-animation: 0.90s ease 0s leftClose;
     animation: 0.90s ease 0s leftClose;
-    -webkit-animation-fill-mode: forwards;
-    /* -ms-animation-fill-mode: forwards; */ 
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards, none;
+    -o-animation-fill-mode: forwards, none;
+    /* none property should return back to previous set CSS */
+    animation-fill-mode: forwards, none;
+    /* tried adding background image here, but did not work*/
 }
  
 @-webkit-keyframes leftOpen {
