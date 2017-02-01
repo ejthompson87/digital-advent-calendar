@@ -30,8 +30,8 @@ app.use(cookieParser());
 // }
 
 function checkMonth(month, day) {
-    // changed to January 
-    if (month === 0) {
+    // changed to February 
+    if (month === 1) {
         return day;
     } else {
         return 0;

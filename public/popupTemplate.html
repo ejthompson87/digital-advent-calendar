@@ -1,46 +1,49 @@
 <div class="day"> <!-- col-md-2 -->
-    <div class="tile" data-date="{{date}}">
-        {{#unlocked}}
-            <div class="tileBack">
-                <div class="factBehindDoor">
-                    {{title}}
-                    {{fact}}
+    {{#day}}
+        <div class="tile" data-date="{{date}}">
+            {{#unlocked}}
+                <div class="tileBack">
+                    <div class="factBehindDoor">
+                        {{title}}
+                        {{fact}}
+                    </div>
                 </div>
-            </div>
-            {{^bittenChoc}}
-                <div class="chocolateBite" onclick="biteChoc(this)">
-                    <img 
-                        class="chocolateImg"
-                        src={{chocolateBite}}
-                        name="chocolateBiteName"
-                        alt="Bitten Chocolate"/>
+                {{^bittenChoc}}
+                    <div class="chocolateBite" onclick="biteChoc(this)">
+                        <img 
+                            class="chocolateImg"
+                            src={{chocolateBite}}
+                            name="chocolateBiteName"
+                            alt="Bitten Chocolate"/>
+                    </div>
+                {{/bittenChoc}}
+                {{^eatenChoc}}
+                    <div class="chocolate" onclick="eatChocolate(this)">
+                        <img 
+                            class="chocolateImg"
+                            src={{chocolate}}
+                            name="chocolateImgName"
+                            alt="Chocolate"/>
+                    </div>
+                {{/eatenChoc}}
+                <div class="doorStart tileTop" onclick="openDoor(this)" style="background-position: {{bgW}} {{bgH}}"> 
+                    <div class="dayContent"> 
+                        <span>  
+                            {{date}}
+                        </span>
+                    </div>
                 </div>
-            {{/bittenChoc}}
-            {{^eatenChoc}}
-                <div class="chocolate" onclick="eatChocolate(this)">
-                    <img 
-                        class="chocolateImg"
-                        src={{chocolate}}
-                        name="chocolateImgName"
-                        alt="Chocolate"/>
-                </div>
-            {{/eatenChoc}}
-            <div class="doorStart tileTop" onclick="openDoor(this)"> 
-                <div class="dayContent"> 
-                    <span>  
-                        {{date}}
-                    </span>
-                </div>
-            </div>
-        {{/unlocked}}
-        {{^unlocked}}            
-            <div class="doorStart tileTop" onclick="lockedClick(this)"> 
-                <div class="dayContent"> 
-                    <span>    
-                        {{date}}
-                    </span>
-                </div>
-            </div>    
-        {{/unlocked}}
-    </div>
+            {{/unlocked}}
+            {{^unlocked}}            
+                <div class="doorStart tileTop" onclick="lockedClick(this)" style="background-position: {{bgW}} {{bgH}}"> 
+                    <div class="dayContent"> 
+                        <span>    
+                            {{date}}
+                        </span>
+                    </div>
+                </div>    
+            {{/unlocked}}
+        </div>
+    {{/day}}
 </div>
+

@@ -70,16 +70,64 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
     var day23 = createDate(23, "Russia didn't consider beer to be alcohol until 2011. It was previously classified as a soft drink.", chocs.cc, chocs.ccb1);
     var day24 = createDate(24, "Nowhere in the Humpty Dumpty Nursery Rhyme does it say that Humpty Dumpty is an egg.", chocs.tree, chocs.treeb2);    
 
-    var calendarDates = {
-    // for dates 6, 14, 20, 17, 7, 9
-        calendarDatesRow1 : [day6, day14, day20, day17, day7, day9],
-    // for dates 11, 24, 8, 21, 1, 12 
-        calendarDatesRow2 : [day11, day24, day8, day21, day1, day12],
-    // for dates 16, 18, 3, 15, 23, 4 
-        calendarDatesRow3 : [day16, day18, day3, day15, day23, day4],
-    // for dates 13, 19, 5, 22, 10, 2
-        calendarDatesRow4 : [day13, day19, day5, day22, day10, day2]
+    var calcBgPositions = function() {
+        var tilesAcross = 6;
+        var tilesDown = 4;
+        var leftBorder = 8;
+        var rightBorder = 8;
+        var doorWidth = 144;
+        var doorHeight = 135;
+        var topBorder = 7.5;
+        var bottomBorder = 7.5;
+
+
+        // A list of lists of {x: 2, y: 3} type pairs
+        var positions = [];
+        y = topBorder;
+        for (var i = 0; i < tilesDown; i++) {
+            var row = [];
+            positions.push(row);
+            var x = leftBorder;
+            for (var j = 0; j < tilesAcross; j++) {
+                row.push({x: -x, y: -y});
+                x += doorWidth + leftBorder + rightBorder;
+            }
+            y += doorHeight + topBorder + bottomBorder;
+        }
+        return positions;
     }
 
+    var bgPositions = calcBgPositions();
+
+    var calendarDates = {
+    // for dates 6, 14, 20, 17, 7, 9
+        calendarDatesRow1 : [{  day: day6, bgW: bgPositions[0][0].x, bgH: bgPositions[0][0].y}, 
+                                {day: day14, bgW: bgPositions[0][1].x, bgH: bgPositions[0][1].y}, 
+                                {day: day20, bgW: bgPositions[0][2].x, bgH: bgPositions[0][2].y}, 
+                                {day: day17, bgW: bgPositions[0][3].x, bgH: bgPositions[0][3].y}, 
+                                {day: day7, bgW: bgPositions[0][4].x, bgH: bgPositions[0][4].y}, 
+                                {day: day9, bgW: bgPositions[0][5].x, bgH: bgPositions[0][5].y}],
+    // for dates 11, 24, 8, 21, 1, 12 
+        calendarDatesRow2 : [{day: day11, bgW: bgPositions[1][0].x, bgH: bgPositions[1][0].y}, 
+                                {day: day24, bgW: bgPositions[1][1].x, bgH: bgPositions[1][1].y}, 
+                                {day: day8, bgW: bgPositions[1][2].x, bgH: bgPositions[1][2].y}, 
+                                {day: day21, bgW: bgPositions[1][3].x, bgH: bgPositions[1][3].y}, 
+                                {day: day1, bgW: bgPositions[1][4].x, bgH: bgPositions[1][4].y}, 
+                                {day: day12, bgW: bgPositions[1][5].x, bgH: bgPositions[1][5].y}],
+    // for dates 16, 18, 3, 15, 23, 4 
+        calendarDatesRow3 : [{day: day16, bgW: bgPositions[2][0].x, bgH: bgPositions[2][0].y}, 
+                                {day: day18, bgW: bgPositions[2][1].x, bgH: bgPositions[2][1].y}, 
+                                {day: day3, bgW: bgPositions[2][2].x, bgH: bgPositions[2][2].y}, 
+                                {day: day15, bgW: bgPositions[2][3].x, bgH: bgPositions[2][3].y}, 
+                                {day: day23, bgW: bgPositions[2][4].x, bgH: bgPositions[2][4].y}, 
+                                {day: day4, bgW: bgPositions[2][5].x, bgH: bgPositions[2][5].y}],
+    // for dates 13, 19, 5, 22, 10, 2
+        calendarDatesRow4 : [{day: day13, bgW: bgPositions[3][0].x, bgH: bgPositions[3][0].y}, 
+                                {day: day19, bgW: bgPositions[3][1].x, bgH: bgPositions[3][1].y}, 
+                                {day: day5, bgW: bgPositions[3][2].x, bgH: bgPositions[3][2].y}, 
+                                {day: day22, bgW: bgPositions[3][3].x, bgH: bgPositions[3][3].y}, 
+                                {day: day10, bgW: bgPositions[3][4].x, bgH: bgPositions[3][4].y}, 
+                                {day: day2, bgW: bgPositions[3][5].x, bgH: bgPositions[3][5].y}]
+    }
     return calendarDates;
 }
