@@ -10,7 +10,7 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
         this.bittenChoc = bittenChoc;
     }
 
-    var createDate = function(dateindex, fact, chocolate, chocolateBite) {
+    function createDate(dateindex, fact, chocolate, chocolateBite) {
         var eaten;
         // if (chocCookieArray.includes(dateindex)) {
         if (chocCookieArray.indexOf(dateindex) === -1) {
@@ -79,7 +79,6 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
         var doorHeight = 135;
         var topBorder = 7.5;
         var bottomBorder = 7.5;
-
 
         // A list of lists of {x: 2, y: 3} type pairs
         var positions = [];
