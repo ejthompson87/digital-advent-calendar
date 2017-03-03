@@ -130,9 +130,9 @@ body {
 } 
 
 .doorOpen {
-    -webkit-animation: 0.90s ease 0.40s leftOpen;
-    -o-animation: 0.90s ease 0.40s leftOpen;
-    animation: 0.90s ease 0.40s leftOpen;
+    -webkit-animation: 0.90s ease 0s leftOpen;
+    -o-animation: 0.90s ease 0s leftOpen;
+    animation: 0.90s ease 0s leftOpen;
     -webkit-animation-fill-mode: forwards, none;
     -o-animation-fill-mode: forwards, none;
     animation-fill-mode: forwards, none;
