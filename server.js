@@ -7,9 +7,6 @@ var mustacheExpress = require('mustache-express');
 var funfactsCreate = require('./funfacts.js');
 var cookieParser = require('cookie-parser');
 
-// var moment = require('moment');
-// moment().format();
-
 // render pages
 app.engine('html', mustacheExpress());   
 
@@ -17,17 +14,6 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/public');
 
 app.use(cookieParser());
-
-// old dateNow function
-// adjust dateNow function for timezone offset
-// function dateNow() {
-//     // change back to 11 for December!
-//     if (new Date().getMonth() === 11) {
-//         return new Date().getDate();
-//     } else {
-//         return 0;
-//     }
-// }
 
 function checkMonth(month, day) {
     // changed to March 

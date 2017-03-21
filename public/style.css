@@ -58,24 +58,6 @@ body {
     background-image: url("present_background_doors.png");
 }
 
-/* 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .adventCalendar {
-    background-image: url("present_background_doors.png");
-    background-position: -1 4;
-    /*background-attachment: fixed;
-    background-size: 1050px 650px;
-    }
-    .tileTop {
-    background-color: #74D680; 
-    background-image: url("present_background_doors.png");
-    background-position: 0 0;
-    background-size: 1050px 650px; 
-    background-attachment: fixed; 
-    } 
-} 
-*/
-
 .chocolate {
     width: 144px;
     height: 135px;
@@ -146,7 +128,6 @@ body {
     -o-animation-fill-mode: forwards, none;
     /* none property should return back to previous set CSS */
     animation-fill-mode: forwards, none;
-    /* tried adding background image here, but did not work*/
 }
  
 @-webkit-keyframes leftOpen {
@@ -171,7 +152,6 @@ body {
     }
 }
 
-/* animation works for firefox -moz- */
 @keyframes leftOpen {
     from {
        transform: perspective(1000px) rotateY(0deg);
@@ -207,7 +187,6 @@ body {
     }
 }
 
-/* animation works for firefox -moz- */
 @keyframes leftClose {
     from {
        transform: perspective(1000px) rotateY(-100deg);
