@@ -1,7 +1,7 @@
 
 body {
     background-color: #D3D3D3;
-    background-image: url("background_trees.png");
+    background-image: url("images/background_trees.png");
     background-size: 460px 500px;
     background-repeat: repeat repeat;
     text-align: center;
@@ -15,7 +15,7 @@ body {
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    background-image: url("present_background_doors.png");
+    background-image: url("images/present_background_doors.png");
     background-position: -1 4;
 }
 
@@ -55,7 +55,7 @@ body {
     cursor: pointer;
     position: absolute;
     background-color: #74D680; 
-    background-image: url("present_background_doors.png");
+    background-image: url("images/present_background_doors.png");
 }
 
 .chocolate {

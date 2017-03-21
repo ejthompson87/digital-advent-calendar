@@ -30,18 +30,18 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
     }
     
     var chocs = {
-        star: "chocolateStar.png", 
-        tree: "chocolateTree.png",
-        cc: "chocolateCandyCane.png",
-        holly: "chocolateHolly.png",
-        starb1: "chocolateStar_bite1.png",
-        starb2: "chocolateStar_bite2.png",
-        treeb1: "chocolateTree_bite1.png",
-        treeb2: "chocolateTree_bite2.png",
-        ccb1: "chocolateCandyCane_bite1.png",
-        ccb2: "chocolateCandyCane_bite2.png",
-        hollyb1: "chocolateHolly_bite1.png",
-        hollyb2: "chocolateHolly_bite2.png"
+        star: "images/chocolateStar.png", 
+        tree: "images/chocolateTree.png",
+        cc: "images/chocolateCandyCane.png",
+        holly: "images/chocolateHolly.png",
+        starb1: "images/chocolateStar_bite1.png",
+        starb2: "images/chocolateStar_bite2.png",
+        treeb1: "images/chocolateTree_bite1.png",
+        treeb2: "images/chocolateTree_bite2.png",
+        ccb1: "images/chocolateCandyCane_bite1.png",
+        ccb2: "images/chocolateCandyCane_bite2.png",
+        hollyb1: "images/chocolateHolly_bite1.png",
+        hollyb2: "images/chocolateHolly_bite2.png"
     }
 
     // daily fun facts
