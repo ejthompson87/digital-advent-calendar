@@ -1,7 +1,6 @@
 "use strict";
 
 var express = require('express');
-var fs = require('fs');
 var app = express();
 var mustacheExpress = require('mustache-express');
 var funfactsCreate = require('./funfacts.js');

@@ -12,20 +12,19 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
 
     function createDate(dateindex, fact, chocolate, chocolateBite) {
         var eaten;
-        // if (chocCookieArray.includes(dateindex)) {
+        // indexOf returns -1 if not found 
         if (chocCookieArray.indexOf(dateindex) === -1) {
             eaten = false;
         } else {
             eaten = true;
         }
         var bitten;
-        // if (chocCookieBittenArray.includes(dateindex)) {
+        // indexOf returns -1 if not found 
         if (chocCookieBittenArray.indexOf(dateindex) === -1) {
             bitten = false;
         } else {
             bitten = true;
         }
-       // if (chocCookieArray contains dateindex then true else false)
         return new day(dateindex, "Fun Fact #" + dateindex + ": ", fact, chocolate, chocolateBite, currentDate >= dateindex, eaten, bitten);
     }
     
