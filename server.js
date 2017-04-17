@@ -29,8 +29,10 @@ function dateNow(offset) {
     var month = date.getUTCMonth();
     var day = date.getUTCDate();
     var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
 
     var offsetNum = parseInt(offset);
+    var utcTime = hours + (minutes / 60);
 
     if (offsetNum === 0) {
         return checkMonth(month, day);
@@ -40,7 +42,7 @@ function dateNow(offset) {
 
     // positive number is less than UTC
     if (offsetHours > 0) {
-        var localHours = hours - offsetHours;
+        var localHours = utcTime - offsetHours;
         if (localHours < 0) {
             return checkMonth(month, day - 1);
         } else {
@@ -50,7 +52,7 @@ function dateNow(offset) {
 
     if (offsetHours < 0) {
         // taking away a negative, will produce positive 
-        var localHours = hours - offsetHours;
+        var localHours = utcTime - offsetHours;
         if (localHours > 24) {
             return checkMonth(month, day + 1);
         } else {
