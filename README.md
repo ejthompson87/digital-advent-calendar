@@ -3,6 +3,8 @@ Digital Advent Calendar
 
 A web-based advent calendar with virtual chocolates and fun facts behind each door.
 
+Can see project here: https://digital-advent-calendar.herokuapp.com/
+
 ## Local Development ##
 
 ## Prerequisites ##
