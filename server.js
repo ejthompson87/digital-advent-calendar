@@ -16,11 +16,12 @@ app.use(cookieParser());
 
 function checkMonth(month, day) {
     // changed to May 
-    if (month === 4) {
-        return day;
-    } else {
-        return 0;
-    }
+    return day;
+    // if (month === 4) {
+    //     return day;
+    // } else {
+    //     return 0;
+    // }
 }
 
 function dateNow(offset) {
