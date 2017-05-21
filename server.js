@@ -15,8 +15,8 @@ app.set('views', __dirname + '/public');
 app.use(cookieParser());
 
 function checkMonth(month, day) {
-    // changed to April 
-    if (month === 3) {
+    // changed to May 
+    if (month === 4) {
         return day;
     } else {
         return 0;
