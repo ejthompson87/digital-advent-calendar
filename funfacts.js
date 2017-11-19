@@ -44,30 +44,30 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
     }
 
     // daily fun facts
-    var day1 = createDate(1, "Hamsters can run up to 9 kms a night.", chocs.star, chocs.starb1);
-    var day2 = createDate(2, "If you google search 'askew', the content will tilt slightly.", chocs.tree, chocs.treeb1);
-    var day3 = createDate(3, "A 'jiffy' is the scientific name for 1/100th of a second.", chocs.cc, chocs.ccb1);
-    var day4 = createDate(4, "Since 1945, all British tanks come with tea making equipment.", chocs.star, chocs.starb2);
-    var day5 = createDate(5, "Guinness Book of Records holds the record for being the book most often stolen from Public Libraries.", chocs.holly, chocs.hollyb1);
-    var day6 = createDate(6, "The man responsible for the modern frisbee design was cremated and made into frisbees.", chocs.tree, chocs.treeb2);
-    var day7 = createDate(7, "There are no bridges over the Amazon River.", chocs.holly, chocs.hollyb2);
-    var day8 = createDate(8, "Stewardesses' is the longest word that is typed with only the left hand.", chocs.cc, chocs.ccb2);
-    var day9 = createDate(9, "If you Google ‘Zerg Rush’ Google will eat up the search results.", chocs.tree, chocs.treeb2);
-    var day10 = createDate(10, "Emus and kangaroos cannot walk backwards, and are on the Australian coat of arms for that reason.", chocs.star, chocs.starb1);
-    var day11 = createDate(11, "Ants stretch when they wake up in the morning.", chocs.cc, chocs.ccb2);
-    var day12 = createDate(12, "Sharks are immune to almost all known diseases.", chocs.holly, chocs.hollyb2);
-    var day13 = createDate(13, "Leonardo da Vinci could write with one hand and draw with the other at the same time.", chocs.tree, chocs.treeb1);
-    var day14 = createDate(14, "All of the clocks in the movie 'Pulp Fiction' are stuck on 4:20.", chocs.cc, chocs.ccb2);
-    var day15 = createDate(15, "Outer space is only an hours’ drive away – if your car could drive straight up.", chocs.star, chocs.starb1);
-    var day16 = createDate(16, "For every human on Earth there are 1.6 million ants.", chocs.holly, chocs.hollyb1);
-    var day17 = createDate(17, "The national animal of Scotland is the Unicorn.", chocs.cc, chocs.ccb1);
-    var day18 = createDate(18, "Billy goats urinate on their own heads to smell more attractive to females.", chocs.star, chocs.starb2);
-    var day19 = createDate(19, "Nearly three percent of the ice in Antarctic glaciers is penguin urine.", chocs.holly, chocs.hollyb1);
-    var day20 = createDate(20, "The leg bones of a bat are so thin that no bat can walk.", chocs.cc, chocs.ccb2);
-    var day21 = createDate(21, "Polar Bears trying to blend in with the ice will cover up their black nose with their paws.", chocs.tree, chocs.treeb1);
-    var day22 = createDate(22, "There are more fake flamingos in the world than real ones.", chocs.holly, chocs.hollyb2);
-    var day23 = createDate(23, "Russia didn't consider beer to be alcohol until 2011. It was previously classified as a soft drink.", chocs.cc, chocs.ccb1);
-    var day24 = createDate(24, "Nowhere in the Humpty Dumpty Nursery Rhyme does it say that Humpty Dumpty is an egg.", chocs.tree, chocs.treeb2);    
+    var day1 = createDate(1, "The Titanic was the first ship to use the SOS signal", chocs.star, chocs.starb1);
+    var day2 = createDate(2, "The Twitter bird actually has a name - Larry", chocs.tree, chocs.treeb1);
+    var day3 = createDate(3, "In the Carribean there are oysters that can climb trees", chocs.cc, chocs.ccb1);
+    var day4 = createDate(4, "In England, the Speaker of the House is not allowed to speak", chocs.star, chocs.starb2);
+    var day5 = createDate(5, "Gorillas burp when they are happy", chocs.holly, chocs.hollyb1);
+    var day6 = createDate(6, "In New York, it is illegal to sell a haunted house without telling the buyer", chocs.tree, chocs.treeb2);
+    var day7 = createDate(7, "The only continent with no active volcanoes is Australia", chocs.holly, chocs.hollyb2);
+    var day8 = createDate(8, "Cows kill more people than sharks do", chocs.cc, chocs.ccb2);
+    var day9 = createDate(9, "San Francisco cable cars are the only National Monuments that can move", chocs.tree, chocs.treeb2);
+    var day10 = createDate(10, "The male ostrich can roar just like a lion", chocs.star, chocs.starb1);
+    var day11 = createDate(11, "A sheep, a duck and a rooster were the first passengers in a hot air balloon", chocs.cc, chocs.ccb2);
+    var day12 = createDate(12, "There is a word for the day after tomorrow - overmorrow", chocs.holly, chocs.hollyb2);
+    var day13 = createDate(13, "In France, it is legal to marry a dead person", chocs.tree, chocs.treeb1);
+    var day14 = createDate(14, "On Jupiter and Saturn it rains diamonds", chocs.cc, chocs.ccb2);
+    var day15 = createDate(15, "'Almost' is the longest word in English with all the letters in alphabetical order", chocs.star, chocs.starb1);
+    var day16 = createDate(16, "There's a website called Kittify that turns your text into cat puns", chocs.holly, chocs.hollyb1);
+    var day17 = createDate(17, "Alaska law says that you can’t look at a moose from an airplane", chocs.cc, chocs.ccb1);
+    var day18 = createDate(18, "A duck’s quack doesn’t echo, and nobody can figure out why", chocs.star, chocs.starb2);
+    var day19 = createDate(19, "315 entries in Webster’s Dictionary were misspelled", chocs.holly, chocs.hollyb1);
+    var day20 = createDate(20, "In every episode of Seinfeld there is a Superman somewhere", chocs.cc, chocs.ccb2);
+    var day21 = createDate(21, "More monopoly money is printed each year than real US currency", chocs.tree, chocs.treeb1);
+    var day22 = createDate(22, "No word in the English language rhymes with month, orange, silver, or purple", chocs.holly, chocs.hollyb2);
+    var day23 = createDate(23, "There is a city called Rome in every continent", chocs.cc, chocs.ccb1);
+    var day24 = createDate(24, "Venus is the only planet in the solar system that rotates clockwise", chocs.tree, chocs.treeb2);    
 
     var calcBgPositions = function() {
         var tilesAcross = 6;
@@ -81,11 +81,11 @@ module.exports = function calendarCalc(currentDate, chocCookieArray, chocCookieB
 
         // A list of lists of {x: 2, y: 3} type pairs
         var positions = [];
-        y = topBorder;
+        y = topBorder + 4;
         for (var i = 0; i < tilesDown; i++) {
             var row = [];
             positions.push(row);
-            var x = leftBorder;
+            var x = leftBorder - 1;
             for (var j = 0; j < tilesAcross; j++) {
                 row.push({x: -x, y: -y});
                 x += doorWidth + leftBorder + rightBorder;

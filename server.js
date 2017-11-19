@@ -15,13 +15,13 @@ app.set('views', __dirname + '/public');
 app.use(cookieParser());
 
 function checkMonth(month, day) {
-    // changed to May 
-    return day;
-    // if (month === 4) {
-    //     return day;
-    // } else {
-    //     return 0;
-    // }
+    // changed to December 
+    // return day;
+    if (month === 11) {
+        return day;
+    } else {
+        return 0;
+    }
 }
 
 function dateNow(offset) {
